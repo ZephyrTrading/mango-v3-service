@@ -32,8 +32,8 @@ docker-compose up
   - the Websocket API Service
   - an nginx reverse proxy
 * Once the environment is running, the REST API and Websocket API are available on localhost
-  - To test REST API: `curl http://localhost/api/wallet/balances`
-  - To test websockets api: `wscat --connect ws://localhost/ws` 
+  - To test REST API: `curl http://localhost:8080/api/wallet/balances`
+  - To test websockets api: `wscat --connect ws://localhost:8080/ws`
 
 
 
