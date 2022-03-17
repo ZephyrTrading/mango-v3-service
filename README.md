@@ -18,10 +18,23 @@ Directory structure
 └── py               - python3 client for above REST API Service
 ```
 
-# How to run
-* `docker-compose up` starts the REST API Service and the WEBSOCKET API Service, and a ngninx reverse proxy
-* The REST API is then available e.g. `curl http://localhost/api/wallet/balances`
-* the WEBSOCKET API is then available e.g.`wscat --connect ws://localhost/ws` (note by default the websocket program when run in isolation is available at `ws://localhost/v1/ws` )
+# How to start the service:
+```
+git clone git@github.com:ZephyrTrading/mango-v3-service.git
+cd mango-v3-service
+git submodules init
+git submodules update
+docker-compose up
+```
+
+* `docker-compose up` starts:
+  - the REST API Service
+  - the Websocket API Service
+  - an nginx reverse proxy
+* Once the environment is running, the REST API and Websocket API are available on localhost
+  - To test REST API: `curl http://localhost/api/wallet/balances`
+  - To test websockets api: `wscat --connect ws://localhost/ws` 
+
 
 
 # Todos
